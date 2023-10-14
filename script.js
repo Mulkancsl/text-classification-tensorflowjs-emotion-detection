@@ -134,31 +134,27 @@ function onClick() {
     }
   }
 
-  let sepr = "Dari pesan tersebut emosinya adalah ";
-
   document.getElementById("resultbox").style.display = "block";
   document.getElementById("loaderResult").style.display = "block";
   document.getElementById("result").style.display = "none";
   document.getElementById("logsbox").style.display = "none";
 
+  let label = ["marah", "takut", "senang", "cinta", "sedih", "terkejut"];
+
   setTimeout(() => {
     document.getElementById("loaderResult").style.display = "none";
     document.getElementById("result").style.display = "block";
     for (let i = 0; i < score.length; i++) {
-      document.getElementById(i).innerText = score[i];
+      document.getElementById(i).innerText = score[i].toFixed(50);
     }
-    if (result == 0) {
-      document.getElementById("result").innerText = sepr + "Marah";
-    } else if (result == 1) {
-      document.getElementById("result").innerText = sepr + "Takut";
-    } else if (result == 2) {
-      document.getElementById("result").innerText = sepr + "Senang";
-    } else if (result == 3) {
-      document.getElementById("result").innerText = sepr + "Cinta";
-    } else if (result == 4) {
-      document.getElementById("result").innerText = sepr + "Sedih";
-    } else if (result == 5) {
-      document.getElementById("result").innerText = sepr + "Terkejut";
+
+    for (let i = 0; i < label.length; i++) {
+      if (result == i) {
+        document.getElementById("result").innerText =
+          "Dari pesan tersebut emosinya adalah " +
+          label[i][0].toUpperCase() +
+          label[i].slice(1);
+      }
     }
   }, 500);
 }
