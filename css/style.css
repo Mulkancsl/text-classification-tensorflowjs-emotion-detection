@@ -1,0 +1,321 @@
+html {
+  background-color: #f0f0f0;
+  min-width: 400px;
+}
+
+h1 {
+  text-align: left;
+}
+
+h2 {
+  text-align: left;
+}
+
+body {
+  min-height: 100vh;
+  background-color: darkslategrey;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0px;
+}
+
+.demo {
+  padding: 80px;
+  background-color: darkcyan;
+  margin: auto;
+  height: auto;
+  width: auto;
+  border-radius: 1%;
+  box-shadow: 3px 3px 0px #00000033;
+}
+
+
+.demo h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: beige;
+  font-weight: 700;
+  padding: 60px 0px 2% 0px;
+  font-size: 50px;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.demo h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: beige;
+  font-weight: 600;
+  font-size: 24px;
+  width: 60%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.demo label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: beige;
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+input {
+  padding-left: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+  font-size: 15px;
+  width: 350px;
+  height: 43px;
+  float: left;
+  border-radius: 12px 0px 0px 12px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 0px 12px 12px 0px;
+  background-color: #f4511e;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* text-shadow: 2px 2px 0px #000000; */
+  border: none;
+  color: beige;
+  text-align: center;
+  font-size: 18px;
+  padding: 0px;
+  transition: all 0.5s;
+  height: 45px;
+  width: 150px;
+  cursor: pointer;
+  float: left;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-weight: bold;
+  color: beige;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#loaderlabel {
+  position: absolute;
+  left: 200px;
+  top: 410px;
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+  color: beige;
+  font-size: 20px;
+  font-weight: 600;
+  animation: fade;
+}
+
+@keyframes fade {
+  from {
+    z-index: 1;
+  }
+  to {
+    z-index: -1;
+  }
+}
+
+#loader {
+  left: 200px;
+  top: 470px;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid cornflowerblue;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#loaderResult {
+  z-index: 1;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid cornflowerblue;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+a:link {
+  color: #3498db;
+}
+a:hover {
+  color: #ff7700;
+}
+a:active {
+  color: green;
+}
+
+#resultbox {
+  text-align: center;
+}
+
+.display {
+  display: flex;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+h4 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: beige;
+  font-weight: 600;
+  font-size: 18px;
+  text-shadow: 1px 1px 0px #000000;
+  margin: 0px;
+  background-color: #2b2b2b;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.text-start {
+  text-align: start !important;
+}
+
+.flex-columns {
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0px;
+}
+
+li {
+  margin: 5px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #aaaaaa;
+  font-weight: 600;
+  font-size: 14px;
+  /* text-shadow: 1px 1px 0px #4b4b4b; */
+}
+
+.logs {
+  background-color: #2b2b2b;
+  padding: 10px;
+}
+
+#toggleLogs {
+  cursor: pointer;
+  user-select: none;
+}
+
+.demo-result {
+  margin-top: 25px;
+}
+
+.recomendedBox {
+  position: relative;
+  cursor: pointer;
+  margin-top: 75px;
+}
+
+.recomended-recom {
+  color: beige;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+.recomended {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  margin: 30px 0px;
+  width: auto;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
